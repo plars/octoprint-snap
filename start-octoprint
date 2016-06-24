@@ -1,0 +1,4 @@
+#!/bin/sh
+
+#octoprint --basedir $SNAP_DATA --daemon start
+octoprint --basedir $SNAP_DATA --iknowwhatimdoing

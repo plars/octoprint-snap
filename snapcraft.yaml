@@ -1,0 +1,21 @@
+name: octoprint
+version: 0.1
+summary: octoprint
+description: |
+  octoprint
+confinement: strict
+
+apps:
+  octoprint:
+    command: start-octoprint
+    plugs: [network, network-bind]
+    daemon: simple
+
+parts:
+  octoprint:
+    plugin: python2
+    source: git://github.com/foosel/OctoPrint
+  start-octoprint:
+    plugin: copy
+    files:
+      start-octoprint: bin/start-octoprint
